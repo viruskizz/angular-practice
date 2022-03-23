@@ -6,7 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  drinks: string[] = [
+  maxCol = 4;
+  series: string[] = [
     'Final Fantasy I',
     'Final Fantasy II',
     'Final Fantasy III',
@@ -27,6 +28,13 @@ export class ListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+  }
+
+  getListColumn(col: number) {
+    const n = Math.floor(this.series.length / this.maxCol);
+    const start = (col - 1) * n;
+    const end = start + n;
+    return this.series.slice().slice(start, end)
   }
 
 }
