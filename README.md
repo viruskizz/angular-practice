@@ -1,6 +1,7 @@
 # Angular practicing project
 This project present about Final Fantasy Character. It show basic syntax and how to use angular in simple.
 
+<img alt="cover-repo" src="https://raw.githubusercontent.com/viruskizz/practice-staff-angular/main/src/assets/example-ng-practice.png" width="560px" />
 
 ## How to use aAngular
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
