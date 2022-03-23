@@ -1,0 +1,11 @@
+
+
+  <div class="card mt-2" style="width: 18rem;">
+    <img [src]="profile.imgUrl" class="card-img-top" alt="ff-character" loading="lazy">
+    <div class="card-body">
+        <h5 class="card-title">
+          <a (click)="goto(profile.id)">{{profile.firstname}} {{profile.lastname}} - {{profile.series}}</a>
+        </h5>
+    </div>
+  </div>
+

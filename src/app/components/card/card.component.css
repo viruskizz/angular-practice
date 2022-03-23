@@ -1,0 +1,10 @@
+img {
+  width: auto;
+  height: 160px;
+  object-fit: cover;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

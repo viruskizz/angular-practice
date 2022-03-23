@@ -1,0 +1,13 @@
+
+<div class="container">
+  <div class="mt-lg-5 mt-3 text-center">
+    <img class="card-img-top" [src]="profile.imgUrl" alt="ff-char">
+    <h3 *ngIf="!profile.description" class="m-5">NOT FOUND</h3>
+  </div>
+  <div *ngIf="profile.description" class="description">
+    <h1 class="mt-3 text-dark">{{title}}</h1>
+    <p class="text-black-50">{{profile.description}}</p>
+    <div class="mt-4"></div>
+    <p class="text-dark fst-italic">from: {{profile.series}}</p>
+  </div>
+</div>

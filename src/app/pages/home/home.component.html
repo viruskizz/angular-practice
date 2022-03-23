@@ -1,0 +1,18 @@
+<div class="container mt-3">
+  <div class="card bg-dark text-white">
+    <img [src]="url" alt="cover-ff" class="card-img">
+    <div class="card-img-overlay">
+      <h1 class="card-title text-center">{{title}}</h1>
+    </div>
+  </div>
+  <div class="mt-3"></div>
+    <app-list></app-list>
+  <h3>All Characters</h3>
+  <div id="Profiles" *ngIf="true">
+    <div class="d-flex flex-row justify-content-between flex-wrap">
+      <app-card
+      *ngFor="let p of profiles; let i = index;"
+      [profile]="p"></app-card>
+    </div>
+  </div>
+</div>

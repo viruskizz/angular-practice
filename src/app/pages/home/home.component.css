@@ -1,0 +1,6 @@
+.card img {
+  opacity: 0.4;
+}
+.card .card-img-overlay .card-title {
+  margin-top: 22%;
+}

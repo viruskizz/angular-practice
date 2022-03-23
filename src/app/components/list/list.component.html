@@ -1,0 +1,5 @@
+<h3>Series</h3>
+<p *ngFor="let drink of drinks; let i = index;"
+    [style.color] = "i % 2 == 0 ? 'black' : 'blue'">
+    {{i + 1}} : {{drink}}
+</p>
