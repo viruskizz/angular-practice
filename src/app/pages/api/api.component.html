@@ -1,0 +1,15 @@
+<div class="container mt-3">
+    <h3>Ghibli Movies</h3>
+    <ul class="list-group">
+        <li *ngFor="let f of flims; let i = index;" class="list-group-item d-flex justify-content-between align-items-center">
+            <span class="d-flex align-items-start">
+                <img [src]="f.image" alt="avatar">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">{{f.title}}({{f.release_date}})</div>
+                    {{f.director}}
+                </div>
+            </span>
+            <span class="badge bg-primary rounded-pill">{{f.rt_score}}</span>	
+        </li>
+    </ul>
+</div>

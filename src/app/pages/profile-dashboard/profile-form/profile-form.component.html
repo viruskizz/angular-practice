@@ -1,0 +1,58 @@
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="submit()" class="form-group">
+            <div class="mb-3">
+                <label for="firstname" class="form-label">Firstname</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    [class.is-invalid]="form.controls.firstname.touched && form.controls.firstname.invalid"
+                    id="firstname"
+                    formControlName="firstname"
+                    placeholder="input firstname">
+                    <div *ngIf="form.controls.firstname.errors?.required" class="invalid-feedback">
+                        Please input firstname.
+                    </div>
+                    <div *ngIf="form.controls.firstname.errors?.minlength" class="invalid-feedback">
+                        Please input more than 6 characters.
+                    </div>
+            </div>
+            <div class="mb-3">
+                <label for="lastname" class="form-label">Lastname</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="lastname"
+                    formControlName="lastname"
+                    [class.is-invalid]="form.controls.lastname.touched && form.controls.lastname.invalid"
+                    placeholder="input lastname">
+            </div>
+            <div class="mb-3">
+                <label for="imgUrl" class="form-label">Image URL</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="imgUrl"
+                    formControlName="imgUrl"
+                    placeholder="https://exmaple.com/ff.png">
+            </div>
+            <div class="mb-3">
+                <label for="series" class="form-label">Serie</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="series"
+                    formControlName="series"
+                    [class.is-invalid]="form.controls.series.touched && form.controls.series.invalid"
+                    placeholder="FFX">
+                    <div *ngIf="form.controls.firstname.errors?.serieInvalid" class="invalid-feedback">
+                        Invalid Series.
+                    </div>
+            </div>
+            <button
+                [disabled]="form.invalid"
+                class="btn btn-primary"
+                type="submit">Submit</button>
+        </form>
+    </div>
+</div>

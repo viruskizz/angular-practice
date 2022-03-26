@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --aot --output-path docs --base-href /angular-practice/",
+    "build:prod": " ng build --aot --output-path docs --base-href //angular-practice/ && cp docs/index.html docs/404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
